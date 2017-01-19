@@ -1,5 +1,8 @@
 {
     "name": "huami/aos-laravel-emq-queue",
+    "description": "Xiaomi Elastic Message Queue driver for Laravel Queue",
+    "keywords": ["laravel", "queue", "emq", "xiaomi"],
+    "license": "MIT",
     "authors": [
         {
             "name": "HFEx",
