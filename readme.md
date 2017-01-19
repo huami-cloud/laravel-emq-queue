@@ -8,9 +8,10 @@ The Expanded Queue Driver For Xiaomi Elastic Message Queue in Laravel 5
 
 - composer
 
-`composer require huami/aos-laravel-emq-queue`
-
-- check your `config/app` file, append `Huami\HFEx\EmqQueue\EmqQueueServiceProvider::class` in `providers` like this
+```
+composer require huami/aos-laravel-emq-queue`
+```
+- check your `config/app` file, append `Huami\HFEx\EmqQueue\EmqQueueServiceProvider::class` to `providers`
 
 ```
 'providers' => [
@@ -21,7 +22,7 @@ The Expanded Queue Driver For Xiaomi Elastic Message Queue in Laravel 5
 
 ## Configuration
 
-- add emq settings to `app/queue.php`
+- add emq settings in `app/queue.php` file
 
 ```
 <?php
@@ -41,7 +42,7 @@ return [
     ]
 ]
 ```
-- change `QUEUE_DRIVER` setting to emq in `.env`
+- change `QUEUE_DRIVER` to emq in `.env`
 
 ```
 ...
