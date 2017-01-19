@@ -1,16 +1,14 @@
 # Laravel Emq Queue
 
-The Expanded Queue Driver For Xiaomi Elastic Message Queue in Laravel 5
+基于 Laravel Queue 的 Xiaomi Elastic Message Queue 扩展
 
-[中文版](./readme_zh.md)
+## 安装
 
-## Installation
-
-- composer
+- 使用 composer 安装
 
 `composer require huami/aos-laravel-emq-queue`
 
-- check your `config/app` file, append `Huami\HFEx\EmqQueue\EmqQueueServiceProvider::class` in `providers` like this
+- 修改 `config/app` 文件，在 `providers` 数组内追加如下内容:
 
 ```
 'providers' => [
@@ -19,9 +17,9 @@ The Expanded Queue Driver For Xiaomi Elastic Message Queue in Laravel 5
 ],
 ```
 
-## Configuration
+## 配置
 
-- add emq settings to `app/queue.php`
+- 修改 `app/queue.php` 文件，增加 emq 相关配置，示例如下
 
 ```
 <?php
@@ -41,7 +39,8 @@ return [
     ]
 ]
 ```
-- change `QUEUE_DRIVER` setting to emq in `.env`
+
+- 修改 `.env` 文件，编辑 `QUEUE_DRIVER`, 示例如下
 
 ```
 ...
