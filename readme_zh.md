@@ -35,6 +35,7 @@ return [
             'host' => 'https://awsbj0.emq.api.xiaomi.com',
             'queue' => 'your-queue-name',
             'develop_id' => 'your-queue-developer-id',
+            'tag' => 'test_tag',
         ],
     ]
 ]

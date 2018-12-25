@@ -11,15 +11,31 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "illuminate/container": "5.*",
-        "illuminate/contracts": "5.*",
-        "illuminate/queue": "5.*",
-        "illuminate/support": "5.*",
-        "xiaomi/galaxy-sds-sdk": "v1.2.8"
+        "illuminate/container": "5.4.*|5.5.*|5.6.*|5.7.*",
+        "illuminate/contracts": "5.4.*|5.5.*|5.6.*|5.7.*",
+        "illuminate/queue": "5.4.*|5.5.*|5.6.*|5.7.*",
+        "illuminate/support": "5.4.*|5.5.*|5.6.*|5.7.*",
+        "xiaomi/galaxy-sds-sdk": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "mockery/mockery": "^1.0"
     },
     "autoload": {
         "psr-4": {
             "Huami\\HFEx\\EmqQueue\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Huami\\HFEx\\EmqQueue\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huami\\HFEx\\EmqQueue\\EmqQueueServiceProvider"
+            ]
         }
     }
 }

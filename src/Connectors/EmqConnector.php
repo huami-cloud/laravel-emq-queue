@@ -37,7 +37,8 @@ class EmqConnector implements ConnectorInterface
             $queueClient,
             $messageClient,
             $config['queue'],
-            $config['develop_id']
+            $config['develop_id'],
+            $config['tag'] ?? null
         );
     }
 

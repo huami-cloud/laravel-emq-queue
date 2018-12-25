@@ -11,6 +11,9 @@ use EMQ\Message\ChangeMessageVisibilityRequest;
 
 class EmqJob extends Job implements JobContract
 {
+    /**
+     * @var \EMQ\Client\EMQClient
+     */
     protected $messageClient;
 
     protected $job;
@@ -29,10 +32,10 @@ class EmqJob extends Job implements JobContract
                                 $queue,
                                 array $job)
     {
-        $this->messageClient = $messageClient;
-        $this->job = $job;
-        $this->queue = $queue;
         $this->container = $container;
+        $this->messageClient = $messageClient;
+        $this->queue = $queue;
+        $this->job = $job;
     }
 
     /**
@@ -102,5 +105,10 @@ class EmqJob extends Job implements JobContract
     public function getEmqJob()
     {
         return $this->job;
+    }
+
+    public function getEmqMessageClient()
+    {
+        return $this->messageClient;
     }
 }
